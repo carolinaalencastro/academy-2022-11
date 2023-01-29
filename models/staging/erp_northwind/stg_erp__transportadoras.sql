@@ -1,12 +1,12 @@
 with
-    source_fornecedores as (
+    source_transportadoras as (
         select
-            cast (supplier_id as int) as id_fornecedor
-            , cast (company_name as string) as nome_do_fornecedor
+            cast (shipper_id as int) as id_transportadora
+            , cast (company_name as string) as nome_da_transportadora
             , cast (phone as string) as telefone
-            --, picture
-        from {{ source ('erp', 'suppliers') }}
+            
+        from {{ source ('erp', 'shippers') }}
     )
 
 select *
-from source_fornecedores
+from source_transportadoras
