@@ -1,0 +1,12 @@
+version 2
+
+models:
+  - name: fct_vendas
+    description: tabela de fatos de vendas da northwind
+    columns:
+      - name: id_pedido
+        description: eh a primary key da dimensao de produtos
+        tests:
+          - unique
+          - not_null
+          
