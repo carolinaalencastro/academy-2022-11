@@ -63,7 +63,8 @@ with
     
     , transformacoes as (
         select
-            *
+            id_pedido || '-' || fk_produto as sk_venda
+            ,*
             ,case
                 when desconto > 0 then true
                 when desconto = 0 then false

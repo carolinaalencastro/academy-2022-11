@@ -1,12 +1,11 @@
-version 2
+version: 2
 
 models:
   - name: fct_vendas
-    description: tabela de fatos de vendas da northwind
+    description: Tabela fatos com dados de venda para cada item de um pedido como valor bruto, valor liquido e total de desconto.
     columns:
-      - name: id_pedido
-        description: eh a primary key da dimensao de produtos
+      - name: sk_vendas
+        description: Chave primária da tabela de vendas.
         tests:
           - unique
           - not_null
-          
